@@ -1,25 +1,8 @@
-import styled from 'styled-components';
 // import QAList from './components/qa/qa';
 import Header from './components/header';
-
-const QaWrapper = styled.div`
-  border: 1px solid black;
-  position: fixed;
-  background-color: #e8e7e7;
-  width: 33%;
-  height: 100%;
-  overflow: auto;
-`;
-
-const MatchWrapper = styled.div`
-  border: 1px solid black;
-  position: fixed;
-  background-color: #f0eae3;
-  width: calc(100% - 33%);
-  height: 100%;
-  right: 0;
-  overflow: auto;
-`;
+import MobileWrapper from './layout/mobile-wrapper';
+import QaWrapper from './layout/desk-qaWrapper';
+import MatchWrapper from './layout/desk-matchWrapper';
 
 function App() {
   return (
@@ -109,6 +92,48 @@ function App() {
         quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
         commodi error quibusdam delectus.
       </MatchWrapper>
+      <MobileWrapper>
+        Mobile Content QA Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Placeat earum ipsum minus libero, dolores tenetur iste quae id
+        itaque voluptas rem consectetur, blanditiis eum tempore adipisci commodi
+        error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
+        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
+        commodi error quibusdam delectus.
+      </MobileWrapper>
     </>
   );
 }
