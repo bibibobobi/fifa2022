@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     display: block;
     width: 50%;
     position: fixed;
-    background-color: #e8e7e7;
+    /* background-color: #f5f1f6; */
     height: calc(100% - 84px);
     overflow: auto;
   }
