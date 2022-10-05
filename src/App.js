@@ -3,12 +3,14 @@ import Header from './components/header';
 import MobileWrapper from './layout/mobile-wrapper';
 import QaWrapper from './layout/desk-qaWrapper';
 import MatchWrapper from './layout/desk-matchWrapper';
+import TitleSection from './components/title-section';
 
 function App() {
   return (
     <>
       <Header />
       <QaWrapper>
+        <TitleSection />
         QA Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
         earum ipsum minus libero, dolores tenetur iste quae id itaque voluptas
         rem consectetur, blanditiis eum tempore adipisci commodi error quibusdam
@@ -92,7 +94,9 @@ function App() {
         quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
         commodi error quibusdam delectus.
       </MatchWrapper>
+
       <MobileWrapper>
+        <TitleSection />
         Mobile Content QA Lorem ipsum, dolor sit amet consectetur adipisicing
         elit. Placeat earum ipsum minus libero, dolores tenetur iste quae id
         itaque voluptas rem consectetur, blanditiis eum tempore adipisci commodi

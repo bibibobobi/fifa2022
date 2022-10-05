@@ -10,13 +10,13 @@ const HeaderWrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
+  padding: 12px 16px 16px 16px;
   height: 48px;
   display: flex;
   justify-content: space-between;
-  padding: 16px 24px 20px 24px;
 
-  @media (max-width: 375px) {
-    padding: 12px 16px 16px 16px;
+  @media (min-width: 768px) {
+    padding: 16px 24px 20px 24px;
   }
 `;
 
