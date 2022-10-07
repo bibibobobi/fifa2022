@@ -1,4 +1,3 @@
-// import QAList from './components/qa/qa';
 import Header from './components/header';
 import MobileWrapper from './layout/mobile-wrapper';
 import QaWrapper from './layout/desk-qaWrapper';
@@ -13,133 +12,12 @@ function App() {
       <QaWrapper>
         <TitleSection />
         <QaSection />
-        QA Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-        earum ipsum minus libero, dolores tenetur iste quae id itaque voluptas
-        rem consectetur, blanditiis eum tempore adipisci commodi error quibusdam
-        delectus.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Placeat earum ipsum minus libero, dolores tenetur iste quae id itaque
-        voluptas rem consectetur, blanditiis eum tempore adipisci commodi error
-        quibusdam delectus.Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Placeat earum ipsum minus libero, dolores tenetur iste quae id
-        itaque voluptas rem consectetur, blanditiis eum tempore adipisci commodi
-        error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.
       </QaWrapper>
-      <MatchWrapper>
-        Teams Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-        earum ipsum minus libero, dolores tenetur iste quae id itaque voluptas
-        rem consectetur, blanditiis eum tempore adipisci commodi error quibusdam
-        delectus.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Placeat earum ipsum minus libero, dolores tenetur iste quae id itaque
-        voluptas rem consectetur, blanditiis eum tempore adipisci commodi error
-        quibusdam delectus.Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Placeat earum ipsum minus libero, dolores tenetur iste quae id
-        itaque voluptas rem consectetur, blanditiis eum tempore adipisci commodi
-        error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.
-      </MatchWrapper>
+      <MatchWrapper></MatchWrapper>
 
       <MobileWrapper>
         <TitleSection />
         <QaSection />
-        Mobile Content QA Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Placeat earum ipsum minus libero, dolores tenetur iste quae id
-        itaque voluptas rem consectetur, blanditiis eum tempore adipisci commodi
-        error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Placeat earum ipsum minus libero, dolores tenetur iste
-        quae id itaque voluptas rem consectetur, blanditiis eum tempore adipisci
-        commodi error quibusdam delectus.
       </MobileWrapper>
     </>
   );

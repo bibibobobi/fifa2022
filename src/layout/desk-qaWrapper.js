@@ -10,6 +10,7 @@ const Wrapper = styled.div`
     /* background-color: #f5f1f6; */
     height: calc(100% - 84px);
     overflow: auto;
+    overflow-x: hidden;
   }
 
   @media (min-width: 1200px) {

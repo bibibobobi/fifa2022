@@ -1602,10 +1602,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@readr-media/react-qa-list@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-qa-list/-/react-qa-list-1.0.4.tgz#71b667f6bf9a80e01cf1e186575cabc4ed5375b4"
-  integrity sha512-wr6Ak8eGHpwJLRYSN/CVKlaX/+C+RwMphTHdQzEB2oakJXGu/P/4xUfCxRBa6dPkZy+iTW21dYPNWomlFNXrcg==
+"@readr-media/react-qa-list@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-qa-list/-/react-qa-list-2.0.1.tgz#571c8b76d3504b625093be05005bee1a7b4a9aa9"
+  integrity sha512-cKjY20E1fOuaCXEv1qqjHjA9UoCL8pOeevTrDYnDZ+oQz9BXCXUcRttaujmCGp/eCdRrIKvh40tJok9YbyW//w==
   dependencies:
     draft-js "^0.11.7"
     lodash "^4.17.21"

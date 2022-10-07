@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-// import QAList from '@readr-media/react-qa-list/lib/react-components';
+// import QAList from '@readr-media/react-qa-list';
 import QAList from '../components/react-components/list/qa-list';
 
 const questions = [
@@ -217,17 +217,27 @@ const questions = [
   },
 ];
 
-const Wrapper = styled.div`
+const Section = styled.div`
   width: 100%;
   background: #f5f1f6;
+  display: flex;
+  justify-content: center;
   align-items: center;
+`;
+
+const Wrapper = styled.div`
+  width: 90%;
+  background: #f5f1f6;
+  padding: 40px 0;
 `;
 
 const QaSection = () => {
   return (
-    <Wrapper>
-      <QAList questions={questions} />
-    </Wrapper>
+    <Section>
+      <Wrapper>
+        <QAList questions={questions} title='你可能不想知道？' />
+      </Wrapper>
+    </Section>
   );
 };
 
