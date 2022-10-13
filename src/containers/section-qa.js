@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import SubTitle from '../components/sub-title';
 
 // import QAList from '@readr-media/react-qa-list';
 import QAList from '../components/react-components/list/qa-list';
@@ -223,6 +224,10 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 4px solid #5d2e7a;
+  @media (min-width: 768px) {
+    border-bottom: none;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -235,7 +240,8 @@ const QaSection = () => {
   return (
     <Section>
       <Wrapper>
-        <QAList questions={questions} title='你可能不想知道？' />
+        <SubTitle>重要資訊懶人包</SubTitle>
+        <QAList questions={questions} />
       </Wrapper>
     </Section>
   );
