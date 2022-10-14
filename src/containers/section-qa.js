@@ -167,7 +167,7 @@ const questions = [
           data: {
             caption: 'nini_test_20220921_01',
             embeddedCode:
-              '<iframe width="560" height="315" src="https://www.youtube.com/embed/zPHyxvPT0gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+              '<iframe width="100%" src="https://www.youtube.com/embed/zPHyxvPT0gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
           },
           type: 'EMBEDDEDCODE',
           mutability: 'IMMUTABLE',

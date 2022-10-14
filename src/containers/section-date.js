@@ -30,8 +30,8 @@ const DateSection = () => {
   }, []);
 
   //
-  console.log(data);
-  // console.log(data.schedule[0]);
+  // console.log(data);
+  console.log(data?.schedule?.[0]);
 
   // const pk161 = data.roundOf16[0];
   // console.log(
