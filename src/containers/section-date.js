@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import SubTitle from '../components/sub-title';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Section = styled.div`
   width: 100%;
@@ -16,6 +18,30 @@ const Wrapper = styled.div`
 `;
 
 const DateSection = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchGroupSchedule = async () => {
+      const response = await axios(
+        'https://storage.googleapis.com/statics.mirrormedia.mg/json/fifa2022_group_schedule.json'
+      );
+      setData(response.data);
+    };
+    fetchGroupSchedule();
+  }, []);
+
+  const groupA = data.schedule[0];
+  console.log(groupA);
+
+  // const pk161 = data.roundOf16[0];
+  // console.log(
+  //   pk161.team1.teamName,
+  //   pk161.team1.score,
+  //   `(${pk161.team1.scorePK})`,
+  //   pk161.team2.teamName,
+  //   pk161.team2.score,
+  //   `(${pk161.team2.scorePK})`
+  // );
+
   return (
     <Section>
       <Wrapper>

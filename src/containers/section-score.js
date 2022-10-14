@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import SubTitle from '../components/sub-title';
-import bgImg2 from '../assets/Group 603.png';
+// import bgImg2 from '../assets/Group 603.png';
 
 const Section = styled.div`
   width: 100%;
   background: #f0eae3;
-  background-image: url(${bgImg2});
+  background-image: url('https://res.cloudinary.com/di1olybhs/image/upload/v1665719181/Group_603_qniccc.png');
   display: flex;
   justify-content: center;
   align-items: center;
