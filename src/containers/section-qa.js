@@ -6,27 +6,37 @@ import QAList from '../components/react-components/list/qa-list';
 
 const questions = [
   {
-    id: '3',
-    title: '如果我想換顏色或圖片怎麼辦？',
+    id: '1',
+    title: '網站的資訊跟我記得的不一樣？看指揮中心政策更改紀錄',
     content: {
       blocks: [
         {
-          key: '1vntn',
+          key: '8cmbc',
           data: {},
-          text: '這樣就可以換顏色',
+          text: '若您發現 READr 網站資訊仍有誤，請私訊 READr 粉絲專頁，或來信 readr@readr.tw 。',
           type: 'unstyled',
           depth: 0,
-          entityRanges: [
+          entityRanges: [],
+          inlineStyleRanges: [
             {
-              key: 0,
-              length: 2,
+              style: 'FONT_COLOR_#222222',
+              length: 1,
               offset: 0,
             },
+            {
+              style: 'FONT_COLOR_#010101',
+              length: 1,
+              offset: 7,
+            },
+            {
+              style: 'FONT_COLOR_#22222',
+              length: 4,
+              offset: 8,
+            },
           ],
-          inlineStyleRanges: [],
         },
         {
-          key: 'seq1',
+          key: '1kj70',
           data: {},
           text: '',
           type: 'unstyled',
@@ -35,14 +45,14 @@ const questions = [
           inlineStyleRanges: [],
         },
         {
-          key: '7t63d',
+          key: '9htsq',
           data: {},
           text: ' ',
           type: 'atomic',
           depth: 0,
           entityRanges: [
             {
-              key: 1,
+              key: 0,
               length: 1,
               offset: 0,
             },
@@ -50,16 +60,7 @@ const questions = [
           inlineStyleRanges: [],
         },
         {
-          key: '9h9gj',
-          data: {},
-          text: '',
-          type: 'unstyled',
-          depth: 0,
-          entityRanges: [],
-          inlineStyleRanges: [],
-        },
-        {
-          key: '2npio',
+          key: 'b8h22',
           data: {},
           text: '',
           type: 'unstyled',
@@ -71,22 +72,15 @@ const questions = [
       entityMap: {
         0: {
           data: {
-            color: '#ED883F',
-          },
-          type: 'COLORTEXT',
-          mutability: 'MUTABLE',
-        },
-        1: {
-          data: {
-            id: '2',
+            id: '23',
             desc: '',
-            name: 'meme',
+            name: '教父',
             resized: {
               original:
-                'https://storage.googleapis.com/statics-editools-dev/images/d1a0d1dc-49db-435e-b1a8-6b3bbd4e1263.jpg',
+                'https:///editools-gcs-dev.readr.tw/images/81cc52bf-c54c-44c9-a26b-66ce52c29948.png',
             },
             imageFile: {
-              url: '/images/d1a0d1dc-49db-435e-b1a8-6b3bbd4e1263.jpg',
+              url: '/images/81cc52bf-c54c-44c9-a26b-66ce52c29948.png',
             },
           },
           type: 'image',
@@ -94,25 +88,48 @@ const questions = [
         },
       },
     },
-    createdAt: '2022-05-21T17:21:58.759Z',
-    updatedAt: '2022-05-21T17:22:42.557Z',
+    sortOrder: 2,
   },
   {
-    id: '2',
-    title: '如果出現不良反應我可以申請理賠嗎？',
+    id: '3',
+    title: 'nini_test_20220921_01',
     content: {
       blocks: [
         {
-          key: 'fqv7j',
+          key: '5rab5',
           data: {},
-          text: '每個人都不得不面對這些問題。在面對這種問題時，務必詳細考慮如果出現不良反應我可以申請理賠嗎？的各種可能。儘管如果出現不良反應我可以申請理賠嗎？看似不顯眼，卻佔據了我的腦海。',
-          type: 'unstyled',
+          text: '妮妮測試一號內容',
+          type: 'header-two',
           depth: 0,
           entityRanges: [],
           inlineStyleRanges: [],
         },
         {
-          key: '1ljqj',
+          key: 'doe66',
+          data: {},
+          text: '妮妮測試一號內容',
+          type: 'header-four',
+          depth: 0,
+          entityRanges: [],
+          inlineStyleRanges: [],
+        },
+        {
+          key: 'jcku',
+          data: {},
+          text: '妮妮測試一號內容',
+          type: 'unstyled',
+          depth: 0,
+          entityRanges: [],
+          inlineStyleRanges: [
+            {
+              style: 'FONT_COLOR_#B7B2BF',
+              length: 8,
+              offset: 0,
+            },
+          ],
+        },
+        {
+          key: 'd65an',
           data: {},
           text: '',
           type: 'unstyled',
@@ -121,7 +138,7 @@ const questions = [
           inlineStyleRanges: [],
         },
         {
-          key: 'c6lg7',
+          key: 'ffb09',
           data: {},
           text: ' ',
           type: 'atomic',
@@ -136,7 +153,7 @@ const questions = [
           inlineStyleRanges: [],
         },
         {
-          key: 'c36so',
+          key: '4p7a3',
           data: {},
           text: '',
           type: 'unstyled',
@@ -148,73 +165,54 @@ const questions = [
       entityMap: {
         0: {
           data: {
-            caption: '',
+            caption: 'nini_test_20220921_01',
             embeddedCode:
-              '<iframe src="https://flo.uri.sh/visualisation/1354785/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pictures non NBA fans wouldn&#39;t understand <a href="https://t.co/olm1gepLI9">pic.twitter.com/olm1gepLI9</a></p>&mdash; . (@ItsAPooleParty_) <a href="https://twitter.com/ItsAPooleParty_/status/1530762623993667584?ref_src=twsrc%5Etfw">May 29, 2022</a></blockquote>\x3Cscript async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Warriors vs. Celtics <br><br>The 2022 NBA Finals is set 😤 <a href="https://t.co/zSzAhTJ8Oh">pic.twitter.com/zSzAhTJ8Oh</a></p>&mdash; SportsCenter (@SportsCenter) <a href="https://twitter.com/SportsCenter/status/1531112201033072640?ref_src=twsrc%5Etfw">May 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+              '<iframe width="560" height="315" src="https://www.youtube.com/embed/zPHyxvPT0gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
           },
           type: 'EMBEDDEDCODE',
           mutability: 'IMMUTABLE',
         },
       },
     },
-    createdAt: '2022-05-21T16:59:45.983Z',
-    updatedAt: '2022-05-21T17:23:38.251Z',
+    sortOrder: 1,
   },
   {
-    id: '1',
-    title: '如果我在建議接種第二劑疫苗的時間未接種到疫苗的話，該怎麼辦？',
+    id: '5',
+    title: 'nini_test_20220922_01',
     content: {
       blocks: [
         {
-          key: '68u8i',
+          key: 'f9vjn',
           data: {},
-          text: '指揮中心建議，接種第 2 劑AZ疫苗的時間最好是間隔 8 至 12 周，如果是 3 月 22 日施打第一劑，12 周後的時間點會落在 6 月 13 日。不過台灣感染症醫學會名譽理事長黃立民指出，國外數據顯示，間隔12到16周打第二劑，其實和間隔10到12周的效果差不多，但因為國外幾乎沒有，建議最晚就是間隔 16 周。因此，在 7 月 11 日前打第二劑都還行。',
+          text: '',
           type: 'unstyled',
           depth: 0,
-          entityRanges: [],
-          inlineStyleRanges: [],
-        },
-        {
-          key: '9852u',
-          data: {},
-          text: '無症狀或症狀緩解',
-          type: 'unordered-list-item',
-          depth: 0,
-          entityRanges: [],
-          inlineStyleRanges: [],
-        },
-        {
-          key: '7erf7',
-          data: {},
-          text: '符合下列其中一項',
-          type: 'unordered-list-item',
-          depth: 0,
-          entityRanges: [],
-          inlineStyleRanges: [],
-        },
-        {
-          key: 'c62qd',
-          data: {},
-          text: '兩次快篩結果為陰性（若距發病/採檢確診日已隔 5 天則快篩一次）',
-          type: 'unordered-list-item',
-          depth: 1,
-          entityRanges: [],
-          inlineStyleRanges: [],
-        },
-        {
-          key: '1hsrs',
-          data: {},
-          text: '距離發病日或採檢日滿 7 天',
-          type: 'unordered-list-item',
-          depth: 1,
           entityRanges: [],
           inlineStyleRanges: [],
         },
       ],
       entityMap: {},
     },
-    createdAt: '2022-05-21T10:33:11.336Z',
-    updatedAt: '2022-05-21T17:28:07.255Z',
+    sortOrder: null,
+  },
+  {
+    id: '6',
+    title: 'nini_test_20220922_02',
+    content: {
+      blocks: [
+        {
+          key: 'a93dj',
+          data: {},
+          text: '',
+          type: 'unstyled',
+          depth: 0,
+          entityRanges: [],
+          inlineStyleRanges: [],
+        },
+      ],
+      entityMap: {},
+    },
+    sortOrder: null,
   },
 ];
 
