@@ -8,7 +8,6 @@ const SubTitleWrapper = styled.div`
   font-weight: 700;
   color: #5d2e7a;
   gap: 8px;
-  margin-bottom: 20px;
   @media (min-width: 768px) {
     font-size: 40px;
     gap: 16px;
