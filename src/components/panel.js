@@ -34,7 +34,7 @@ export const Button = styled.button`
       }
     `}
 
-  @media (min-width: 940px) {
+  @media (min-width: 1200px) {
     width: 140px;
     height: 51px;
   }
