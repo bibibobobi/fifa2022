@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import SubTitle from '../components/sub-title';
+import SubTitle from '../../components/sub-title';
 import {
   Button,
   BtnBlock,
   ContentContainer,
   ContentTab,
   PanelWrapper,
-} from '../components/panel';
+} from '../../components/panel';
 // import bgImg2 from '../assets/Group 603.png';
 
 const Section = styled.div`
@@ -21,8 +21,11 @@ const Section = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 95%;
   padding: 40px 0;
+  @media (min-width: 1200px) {
+    width: 90%;
+  }
 `;
 
 const ScoreSection = () => {

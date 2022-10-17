@@ -61,9 +61,9 @@ export const BtnBlock = styled.div`
     background-color: #b79ac9;
     width: 1px;
     height: 27px;
-    @media (min-width: 940px) {
+    @media (min-width: 1200px) {
       top: 12px;
-      translate: 138px;
+      left: 140px;
     }
   } */
 `;
@@ -75,13 +75,12 @@ export const ContentContainer = styled.div`
   background: #f0e2d2;
   border: 2px solid #5d2e7a;
   border-radius: 6px;
-
   border: 1px solid rgba(0, 0, 0, 0.274);
 `;
 
 export const ContentTab = styled.div`
   width: 100%;
-  height: 100px;
+  height: 100%;
   display: none;
   ${(props) =>
     props.active &&

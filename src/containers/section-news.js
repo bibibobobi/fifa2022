@@ -10,8 +10,11 @@ const Section = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 95%;
   padding: 40px 0;
+  @media (min-width: 1200px) {
+    width: 90%;
+  }
 `;
 
 const NewsSection = () => {
