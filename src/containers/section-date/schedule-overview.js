@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
 const Table = styled.table`
   width: 100%;
@@ -107,6 +107,7 @@ const Tbody = styled.thead`
     width: fit-content;
     font-size: 14px;
     background-color: #f5f1f6;
+    padding: 0 3px;
     @media (min-width: 1200px) {
       display: none;
     }
@@ -145,10 +146,10 @@ const ScheduleOverview = () => {
                 <span className='dot'>・</span>
                 <span>{match.team2}</span>
               </td>
-              <span className='group-end-wrapper'>
-                <td className='group-mob'>{match.group}組</td>
-                <td className='end'>{match.ended && '結束'}</td>
-              </span>
+              <td className='group-end-wrapper'>
+                <span className='group-mob'>{match.group}組</span>
+                <span className='end'>{match.ended && '結束'}</span>
+              </td>
             </tr>
           );
         })}

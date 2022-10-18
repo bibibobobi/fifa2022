@@ -4,7 +4,7 @@ import QaWrapper from './layout/desk-qaWrapper';
 import MatchWrapper from './layout/desk-matchWrapper';
 import TitleSection from './components/title-section';
 import QaSection from './containers/section-qa';
-import DateSection from './containers/section-date/section-date';
+import DateSection from './containers/section-date/section-schedule';
 import ScoreSection from './containers/section-score/section-score';
 import NewsSection from './containers/section-news';
 // import { Diamond } from './components/icons/styled-diamond';
