@@ -10,7 +10,7 @@ const Section = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 95%;
+  width: 92%;
   padding: 40px 0;
   @media (min-width: 1200px) {
     width: 90%;

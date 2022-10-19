@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import SubTitle from '../../components/sub-title';
+import ScoreRound16 from './score-round16';
 import {
   Button,
   BtnBlock,
-  ContentContainer,
   ContentTab,
   PanelWrapper,
 } from '../../components/panel';
@@ -21,7 +21,7 @@ const Section = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 95%;
+  width: 92%;
   padding: 40px 0;
   @media (min-width: 1200px) {
     width: 90%;
@@ -49,10 +49,11 @@ const ScoreSection = () => {
             </Button>
           </BtnBlock>
         </PanelWrapper>
-        <ContentContainer>
-          <ContentTab active={toggleState === 1}>小組賽</ContentTab>
-          <ContentTab active={toggleState === 2}>16強</ContentTab>
-        </ContentContainer>
+
+        <ContentTab active={toggleState === 1}>小組賽</ContentTab>
+        <ContentTab active={toggleState === 2}>
+          <ScoreRound16 />
+        </ContentTab>
       </Wrapper>
     </Section>
   );

@@ -76,7 +76,6 @@ export const ContentContainer = styled.div`
   background: #f0e2d2;
   border: 2px solid #5d2e7a;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.274);
   @media (min-width: 1200px) {
     background: transparent;
     border: none;

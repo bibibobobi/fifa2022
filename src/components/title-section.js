@@ -24,7 +24,7 @@ const YearWrapper = styled.div`
   @media (min-width: 768px) {
     font-size: 60px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1540px) {
     font-size: 72px;
   }
 `;
@@ -42,7 +42,7 @@ const EnTitleWrapper = styled.div`
     width: 368px;
     font-size: 46px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1540px) {
     width: 448px;
     font-size: 60px;
   }
@@ -61,7 +61,7 @@ const ChTitleWrapper = styled.div`
     width: 368px;
     font-size: 48px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1540px) {
     width: 448px;
     font-size: 62px;
   }
@@ -74,7 +74,7 @@ const TitleDecoLeft = styled.img`
     transform: translateY(-10px) rotate(180deg);
     width: 100px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1540px) {
     width: 120px;
   }
 `;
@@ -86,7 +86,7 @@ const TitleDecoRight = styled.img`
     transform: translateY(-10px);
     width: 100px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1540px) {
     width: 120px;
   }
 `;

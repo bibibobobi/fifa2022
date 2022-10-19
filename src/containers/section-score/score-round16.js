@@ -1,6 +1,3 @@
-// import { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import styled from 'styled-components';
 import { ContentContainer } from '../../components/panel';
 import {
   TreeWrapper,
@@ -15,7 +12,7 @@ import {
   StepChild3,
 } from '../../components/tournament-bracket';
 
-const ScheduleRound16 = () => {
+const ScoreRound16 = () => {
   // Fetch Data
   // const [round16, setRound16] = useState([]);
   // useEffect(() => {
@@ -102,4 +99,4 @@ const ScheduleRound16 = () => {
   );
 };
 
-export default ScheduleRound16;
+export default ScoreRound16;
