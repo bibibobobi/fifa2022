@@ -150,7 +150,7 @@ export const Row = styled.div`
     margin-right: 30px;
   }
 
-  p {
+  h1 {
     color: #5d2e7a;
     font-weight: 500;
     font-size: 18px;

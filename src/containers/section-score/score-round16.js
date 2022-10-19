@@ -30,7 +30,7 @@ const ScoreRound16 = () => {
     <ContentContainer>
       <TreeWrapper>
         <Row>
-          <p>16強賽</p>
+          <h1>16強賽</h1>
           <ItemChild>
             <p>Child 1</p>
           </ItemChild>
@@ -57,7 +57,7 @@ const ScoreRound16 = () => {
           </ItemChild>
         </Row>
         <Row>
-          <p>半準決賽</p>
+          <h1>半準決賽</h1>
           <ItemParent>
             <p>Parent 1</p>
           </ItemParent>
@@ -74,7 +74,7 @@ const ScoreRound16 = () => {
           </ItemParent>
         </Row>
         <Row>
-          <p>準決賽</p>
+          <h1>準決賽</h1>
           <ItemGrandParent>
             <p>Parent 1</p>
           </ItemGrandParent>
@@ -83,13 +83,13 @@ const ScoreRound16 = () => {
             <p>Parent 2</p>
           </ItemGrandParent>
           <span> </span>
-          <p>季軍賽</p>
+          <h1>季軍賽</h1>
           <ItemOnlyChild>
             <p>Stepmother</p>
           </ItemOnlyChild>
         </Row>
         <Row>
-          <p>決賽</p>
+          <h1>決賽</h1>
           <ItemGreatParent>
             <p>only-child</p>
           </ItemGreatParent>
