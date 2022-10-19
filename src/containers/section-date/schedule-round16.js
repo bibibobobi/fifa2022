@@ -46,7 +46,6 @@ const ScheduleRound16 = () => {
   }, []);
 
   const data = round16?.roundOf16;
-  console.log(data?.[0].team1.teamName);
 
   return (
     <ContentContainer>
