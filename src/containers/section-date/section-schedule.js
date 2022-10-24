@@ -10,6 +10,7 @@ import {
 } from '../../components/panel';
 import ScheduleOverview from './schedule-overview';
 import ScheduleRound16 from './schedule-round16';
+import ScheduleGroup from './schedule-group';
 
 const Section = styled.div`
   width: 100%;
@@ -53,7 +54,9 @@ const DateSection = () => {
           </BtnBlock>
         </PanelWrapper>
 
-        <ContentTab active={toggleState === 1}>小組賽</ContentTab>
+        <ContentTab active={toggleState === 1}>
+          <ScheduleGroup />
+        </ContentTab>
         <ContentTab active={toggleState === 2}>
           <ScheduleRound16 />
         </ContentTab>

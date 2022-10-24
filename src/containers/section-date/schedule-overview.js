@@ -147,7 +147,10 @@ const ScheduleOverview = () => {
                 <span>{match.team2}</span>
               </td>
               <td className='group-end-wrapper'>
-                <span className='group-mob'>{match.group}組</span>
+                <span className='group-mob'>
+                  {match.group}
+                  {match.group && '組'}
+                </span>
                 <span className='end'>{match.ended && '結束'}</span>
               </td>
             </tr>

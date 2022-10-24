@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import SubTitle from '../../components/sub-title';
 import ScoreRound16 from './score-round16';
+import ScoreGroup from './score-group';
 import {
   Button,
   BtnBlock,
@@ -50,7 +51,9 @@ const ScoreSection = () => {
           </BtnBlock>
         </PanelWrapper>
 
-        <ContentTab active={toggleState === 1}>小組賽</ContentTab>
+        <ContentTab active={toggleState === 1}>
+          <ScoreGroup />
+        </ContentTab>
         <ContentTab active={toggleState === 2}>
           <ScoreRound16 />
         </ContentTab>
