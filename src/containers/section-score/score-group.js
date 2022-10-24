@@ -24,28 +24,28 @@ const ScoreGroup = () => {
       <PanelWrapper>
         <BtnWrapper>
           <GroupBtn active={toggleState === 1} onClick={() => toggleTab(1)}>
-            A組
+            A 組
           </GroupBtn>
           <GroupBtn active={toggleState === 2} onClick={() => toggleTab(2)}>
-            B組
+            B 組
           </GroupBtn>
           <GroupBtn active={toggleState === 3} onClick={() => toggleTab(3)}>
-            C組
+            C 組
           </GroupBtn>
           <GroupBtn active={toggleState === 4} onClick={() => toggleTab(4)}>
-            D組
+            D 組
           </GroupBtn>
           <GroupBtn active={toggleState === 5} onClick={() => toggleTab(5)}>
-            E組
+            E 組
           </GroupBtn>
           <GroupBtn active={toggleState === 6} onClick={() => toggleTab(6)}>
-            F組
+            F 組
           </GroupBtn>
           <GroupBtn active={toggleState === 7} onClick={() => toggleTab(7)}>
             G組
           </GroupBtn>
           <GroupBtn active={toggleState === 8} onClick={() => toggleTab(8)}>
-            H組
+            H 組
           </GroupBtn>
         </BtnWrapper>
       </PanelWrapper>

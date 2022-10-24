@@ -64,12 +64,14 @@ export const GroupBtn = styled.div`
 `;
 
 export const BtnWrapper = styled.div`
+  /* overflow-x: scroll; */
   display: flex;
   flex-direction: row;
   border: 2px solid #5d2e7a;
   width: fit-content;
   border-radius: 8px 8px 0px 0px;
   border-bottom: none;
+  border-left: none;
   ${GroupBtn}:first-child {
     border-radius: 6px 0px 0px 0px;
   }
