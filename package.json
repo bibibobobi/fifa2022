@@ -44,6 +44,5 @@
   "resolutions": {
     "styled-components": "^5",
     "react": "18.2.0"
-  },
-  "homepage": "https://storage.googleapis.com/statics.mirrormedia.mg/projects/dev-fifa2022/build/"
+  }
 }

@@ -3,34 +3,19 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 import { ContentTab } from '../../components/panel';
-import { GroupBtn, BtnWrapper } from '../../components/group-panel';
-
-/**
- *
- */
-
-const GroupeTableWrapper = styled.div`
-  width: 100%;
-  overflow: auto;
-  @media (min-width: 1200px) {
-    /* width: 90%; */
-  }
-`;
-
-const GroupPanelWrapper = styled.div`
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-  border-left: 2px solid #5d2e7a;
-  border-bottom: none;
-  overflow-y: scroll;
-`;
+import {
+  GroupBtn,
+  BtnWrapper,
+  GroupPanelWrapper,
+  GroupeTableWrapper,
+} from '../../components/group-panel';
 
 const Table = styled.table`
   width: 100%;
   height: 505px;
   border: 2px solid #5d2e7a;
   border-top: none;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 8px 8px;
   display: block;
   font-size: 16px;
   @media (min-width: 1260px) {
@@ -55,12 +40,12 @@ const Thead = styled.thead`
     text-align: left;
     padding-left: 20px;
     /* height: 48px; */
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       height: 51px;
       width: 215px;
     }
     :last-child {
-      @media (min-width: 1200px) {
+      @media (min-width: 1260px) {
         transform: translateX(60px);
       }
     }
@@ -82,7 +67,7 @@ const Tbody = styled.thead`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       height: 51px;
     }
   }
@@ -90,14 +75,14 @@ const Tbody = styled.thead`
     width: 50px;
     color: #b79ac9;
     font-size: 14px;
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       font-size: 18px;
     }
   }
   .time {
     width: 50px;
     margin-left: 20px;
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       width: 150px;
     }
   }
@@ -106,14 +91,14 @@ const Tbody = styled.thead`
     font-size: 14px;
     padding: 0 5px;
     background-color: #f5f1f6;
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       display: block;
     }
   }
   .dot {
     color: #b79ac9;
     display: none;
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       display: block;
     }
   }
@@ -121,7 +106,7 @@ const Tbody = styled.thead`
     display: flex;
     flex-direction: column;
     width: 140px;
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       width: 280px;
       flex-direction: row;
     }
@@ -136,7 +121,7 @@ const Tbody = styled.thead`
     font-size: 14px;
     background-color: #f5f1f6;
     padding: 0 3px;
-    @media (min-width: 1200px) {
+    @media (min-width: 1260px) {
       display: none;
     }
   }

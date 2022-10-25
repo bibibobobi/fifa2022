@@ -1,5 +1,24 @@
 import styled, { css } from 'styled-components';
 
+export const GroupeTableWrapper = styled.div`
+  width: 100%;
+  overflow: auto;
+`;
+
+export const GroupPanelWrapper = styled.div`
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  border-left: 2px solid #5d2e7a;
+  border-right: 2px solid #5d2e7a;
+  border-bottom: none;
+  overflow-y: scroll;
+  background-color: #5d2e7a;
+  @media (min-width: 1200px) {
+    border-right: none;
+    background-color: transparent;
+  }
+`;
+
 export const GroupBtn = styled.div`
   position: relative;
   background: #5d2e7a;

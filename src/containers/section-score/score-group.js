@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
 
-import { ContentTab, PanelWrapper } from '../../components/panel';
-import { GroupBtn, BtnWrapper } from '../../components/group-panel';
-
-const Wrapper = styled.div`
-  width: 92%;
-  padding: 40px 0;
-  @media (min-width: 1200px) {
-    width: 90%;
-  }
-`;
+import { ContentTab } from '../../components/panel';
+import {
+  GroupBtn,
+  BtnWrapper,
+  GroupPanelWrapper,
+  GroupeTableWrapper,
+} from '../../components/group-panel';
 
 const ScoreGroup = () => {
   // Toggle group panels
@@ -20,8 +17,8 @@ const ScoreGroup = () => {
   };
 
   return (
-    <Wrapper>
-      <PanelWrapper>
+    <GroupeTableWrapper>
+      <GroupPanelWrapper>
         <BtnWrapper>
           <GroupBtn active={toggleState === 1} onClick={() => toggleTab(1)}>
             A 組
@@ -48,7 +45,7 @@ const ScoreGroup = () => {
             H 組
           </GroupBtn>
         </BtnWrapper>
-      </PanelWrapper>
+      </GroupPanelWrapper>
 
       <ContentTab active={toggleState === 1}>a組</ContentTab>
       <ContentTab active={toggleState === 2}>b組</ContentTab>
@@ -58,7 +55,7 @@ const ScoreGroup = () => {
       <ContentTab active={toggleState === 6}>f組</ContentTab>
       <ContentTab active={toggleState === 7}>g組</ContentTab>
       <ContentTab active={toggleState === 8}>h組</ContentTab>
-    </Wrapper>
+    </GroupeTableWrapper>
   );
 };
 
