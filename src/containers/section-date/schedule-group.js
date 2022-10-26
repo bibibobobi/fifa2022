@@ -6,21 +6,19 @@ import { ContentTab } from '../../components/panel';
 import {
   GroupBtn,
   BtnWrapper,
-  GroupPanelWrapper,
-  GroupeTableWrapper,
+  SwipeWrapper,
+  BorderWrapper,
 } from '../../components/group-panel';
 
 const Table = styled.table`
   width: 100%;
   height: 505px;
-  border: 2px solid #5d2e7a;
-  border-top: none;
   border-radius: 0 0 8px 8px;
   display: block;
   font-size: 16px;
-  @media (min-width: 1260px) {
+  @media (min-width: 1200px) {
     font-size: 18px;
-    width: 756px;
+    width: 100%;
     height: 368px;
   }
 `;
@@ -64,7 +62,7 @@ const Tbody = styled.thead`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       height: 51px;
     }
   }
@@ -72,14 +70,14 @@ const Tbody = styled.thead`
     width: 50px;
     color: #b79ac9;
     font-size: 14px;
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       font-size: 18px;
     }
   }
   .time {
     width: 50px;
     margin-left: 20px;
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       width: 150px;
     }
   }
@@ -88,14 +86,14 @@ const Tbody = styled.thead`
     font-size: 14px;
     padding: 0 5px;
     background-color: #f5f1f6;
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       display: block;
     }
   }
   .dot {
     color: #b79ac9;
     display: none;
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       display: block;
     }
   }
@@ -103,7 +101,7 @@ const Tbody = styled.thead`
     display: flex;
     flex-direction: column;
     width: 140px;
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       width: 280px;
       flex-direction: row;
     }
@@ -118,7 +116,7 @@ const Tbody = styled.thead`
     font-size: 14px;
     background-color: #f5f1f6;
     padding: 0 3px;
-    @media (min-width: 1260px) {
+    @media (min-width: 1200px) {
       display: none;
     }
   }
@@ -134,20 +132,18 @@ const ScheduleGroup = () => {
   // Fetch Data
   const [schedule, setSchedule] = useState([]);
   useEffect(() => {
-    const fetchScheduleOverview = async () => {
+    const fetchSchedule = async () => {
       const response = await axios(
         'https://storage.googleapis.com/statics.mirrormedia.mg/json/fifa2022_group_schedule.json'
       );
       setSchedule(response?.data);
     };
-    fetchScheduleOverview();
+    fetchSchedule();
   }, []);
 
-  console.log(schedule?.schedule);
-
   return (
-    <GroupeTableWrapper>
-      <GroupPanelWrapper>
+    <BorderWrapper>
+      <SwipeWrapper>
         <BtnWrapper>
           <GroupBtn active={toggleState === 1} onClick={() => toggleTab(1)}>
             A 組
@@ -174,7 +170,7 @@ const ScheduleGroup = () => {
             H 組
           </GroupBtn>
         </BtnWrapper>
-      </GroupPanelWrapper>
+      </SwipeWrapper>
 
       <ContentTab active={toggleState === 1}>
         <Table>
@@ -429,7 +425,7 @@ const ScheduleGroup = () => {
           </Tbody>
         </Table>
       </ContentTab>
-    </GroupeTableWrapper>
+    </BorderWrapper>
   );
 };
 

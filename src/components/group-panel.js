@@ -1,22 +1,15 @@
 import styled, { css } from 'styled-components';
 
-export const GroupeTableWrapper = styled.div`
-  width: 100%;
-  overflow: auto;
+export const BorderWrapper = styled.div`
+  max-width: 756px;
+  border: 2px solid #5d2e7a;
+  border-radius: 8px;
+  background-color: #ffffff;
 `;
 
-export const GroupPanelWrapper = styled.div`
+export const SwipeWrapper = styled.div`
   width: 100%;
-  border-radius: 8px 8px 0 0;
-  border-left: 2px solid #5d2e7a;
-  border-right: 2px solid #5d2e7a;
-  border-bottom: none;
-  overflow-y: scroll;
-  background-color: #5d2e7a;
-  @media (min-width: 1200px) {
-    border-right: none;
-    background-color: transparent;
-  }
+  overflow: auto;
 `;
 
 export const GroupBtn = styled.button`
@@ -25,7 +18,7 @@ export const GroupBtn = styled.button`
   color: #d8c3e4;
   font-weight: 700;
   font-size: 18px;
-  width: 94px;
+  width: 94.5px;
   height: 51px;
   display: inline-block;
   text-align: center;
@@ -82,12 +75,10 @@ export const GroupBtn = styled.button`
 `;
 
 export const BtnWrapper = styled.div`
-  /* overflow-x: scroll; */
   display: flex;
   flex-direction: row;
-  border: 2px solid #5d2e7a;
-  width: fit-content;
-  border-radius: 8px 8px 0px 0px;
+  width: 756px;
+  border-radius: 6px 6px 0px 0px;
   border-bottom: none;
   border-left: none;
   ${GroupBtn}:first-child {

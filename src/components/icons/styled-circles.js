@@ -1,25 +1,9 @@
 import styled from 'styled-components';
-import {
-  BsFillCheckCircleFill,
-  BsFillDashCircleFill,
-  BsFillXCircleFill,
-} from 'react-icons/bs';
+import win from '../../assets/win.svg';
+import loss from '../../assets/loss.svg';
+import draw from '../../assets/draw.svg';
+
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
-
-const WinStyle = styled.div`
-  font-size: 1.25rem;
-  color: #18b958;
-`;
-
-const LossStyle = styled.div`
-  font-size: 1.25rem;
-  color: #f5431c;
-`;
-
-const DrawStyle = styled.div`
-  font-size: 1.25rem;
-  color: #9b9b9b;
-`;
 
 const ArrowStyle = styled.div`
   font-size: 1.54rem;
@@ -30,8 +14,20 @@ export const NaCircle = styled.div`
   width: 20px;
   height: 20px;
   background-color: #ffffff;
-  border: 1px solid #9b9b9b;
   border-radius: 50%;
+  ${(props) => {
+    switch (props.status) {
+      case 'win':
+        return `background-image: url(${win})`;
+
+      case 'loss':
+        return `background-image: url(${loss});`;
+      case 'draw':
+        return `background-image: url(${draw});`;
+      default:
+        return 'border: 1px solid #9b9b9b;';
+    }
+  }}
 `;
 
 export const AdvSquare = styled.div`
@@ -39,24 +35,6 @@ export const AdvSquare = styled.div`
   height: 18px;
   background-color: #f5ab1c;
 `;
-
-export const Win = () => (
-  <WinStyle>
-    <BsFillCheckCircleFill />
-  </WinStyle>
-);
-
-export const Loss = () => (
-  <LossStyle>
-    <BsFillXCircleFill />
-  </LossStyle>
-);
-
-export const Draw = () => (
-  <DrawStyle>
-    <BsFillDashCircleFill />
-  </DrawStyle>
-);
 
 export const Arrow = () => (
   <ArrowStyle>

@@ -27,6 +27,9 @@ const Wrapper = styled.div`
   @media (min-width: 1200px) {
     width: 90%;
   }
+  @media (min-width: 1338px) {
+    width: 80%;
+  }
 `;
 
 const ScoreSection = () => {
