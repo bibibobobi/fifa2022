@@ -9,7 +9,7 @@ export const BorderWrapper = styled.div`
 
 export const SwipeWrapper = styled.div`
   width: 100%;
-  overflow: auto;
+  overflow-x: scroll;
 `;
 
 export const GroupBtn = styled.button`

@@ -9,7 +9,6 @@ import {
   ContentTab,
   PanelWrapper,
 } from '../../components/panel';
-// import bgImg2 from '../assets/Group 603.png';
 
 const Section = styled.div`
   width: 100%;
