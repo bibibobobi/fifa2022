@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { InView } from 'react-intersection-observer';
 import axios from 'axios';
 import styled from 'styled-components';
 import SubTitle from '../../components/sub-title';
 import NewsItems from './news-items';
 import NewsItemsAfterAd from './news-items-after-ad';
 import AdMob from '../../components/ad/ad-mob';
+import AdPc from '../../components/ad/ad.pc';
 
 const Section = styled.div`
   width: 100%;
@@ -12,7 +14,10 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
+  @media (min-width: 1200px) {
+    padding-bottom: 250px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -52,6 +57,9 @@ const NewsSection = () => {
 
   const newsItems = news._items;
 
+  // InterSection Observer
+  const [inView, setInView] = useState(false);
+
   return (
     <Section>
       <Wrapper>
@@ -59,8 +67,15 @@ const NewsSection = () => {
         <NewsItemsWrapper>
           <NewsItems newsItems={newsItems} />
           <AdMob />
-          <NewsItemsAfterAd newsItems={newsItems} />
+          <AdPc inView={inView} />
         </NewsItemsWrapper>
+        <InView onChange={setInView}>
+          {({ ref, inView }) => (
+            <NewsItemsWrapper ref={ref}>
+              <NewsItemsAfterAd newsItems={newsItems} ref={ref} />
+            </NewsItemsWrapper>
+          )}
+        </InView>
       </Wrapper>
     </Section>
   );

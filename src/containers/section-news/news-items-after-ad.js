@@ -83,6 +83,7 @@ const NewsItemsAfterAd = ({ newsItems }) => {
         href={`https://www.mirrormedia.mg/story/${item?.slug}`}
         target='_blank'
         rel='noreferrer'
+        key={item._id}
       >
         <CardWrapper>
           <ImgWrapper>
