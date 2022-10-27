@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import SubTitle from '../../components/sub-title';
+import NewsItems from './news-items';
+import NewsItemsAfterAd from './news-items-after-ad';
 
 const Section = styled.div`
   width: 100%;
@@ -9,16 +11,27 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 150px;
 `;
 
 const Wrapper = styled.div`
   width: 92%;
   padding: 40px 0;
   @media (min-width: 1200px) {
-    width: 90%;
+    width: 95%;
   }
-  @media (min-width: 1338px) {
+  @media (min-width: 1440px) {
     width: 80%;
+  }
+`;
+
+const NewsItemsWrapper = styled.div`
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 16px;
+  @media (min-width: 1200px) {
   }
 `;
 
@@ -28,29 +41,23 @@ const NewsSection = () => {
   useEffect(() => {
     const fetchResult = async () => {
       const response = await axios(
-        'https://www.mirrormedia.mg/json/5a55bd82160ac91000294e4.json'
+        'https://www.mirrormedia.mg/json/5816e555aa39ed0d00bfd9d3.json'
       );
       setNews(response?.data);
     };
     fetchResult();
   }, []);
 
-  const newsItems = news?._items;
-  console.log({ newsItems });
-
-  console.log(news?._items?.[0]);
-  console.log(news?._items?.[0]?.heroImage?.image?.resizedTargets?.mobile?.url);
-  console.log(news?._items?.[0]?.title);
-  console.log(
-    `url:https://www.mirrormedia.mg/story/${news?._items?.[0]?.slug}`
-  );
-  console.log(news?._items?.[0]?.createTime.slice(5, -7));
-  //Wed, 10 Jan 2018 07:10:58 GMT-->2018/01/10 07:10
+  const newsItems = news._items;
 
   return (
     <Section>
       <Wrapper>
         <SubTitle>最新消息</SubTitle>
+        <NewsItemsWrapper>
+          <NewsItems newsItems={newsItems} />
+          <NewsItemsAfterAd newsItems={newsItems} />
+        </NewsItemsWrapper>
       </Wrapper>
     </Section>
   );

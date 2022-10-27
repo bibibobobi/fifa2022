@@ -225,6 +225,7 @@ const Section = styled.div`
   border-bottom: 4px solid #5d2e7a;
   @media (min-width: 768px) {
     border-bottom: none;
+    padding-bottom: 150px;
   }
 `;
 

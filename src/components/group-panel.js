@@ -5,6 +5,7 @@ export const BorderWrapper = styled.div`
   border: 2px solid #5d2e7a;
   border-radius: 8px;
   background-color: #ffffff;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.06), 0px 4px 12px rgba(0, 0, 0, 0.06);
 `;
 
 export const SwipeWrapper = styled.div`

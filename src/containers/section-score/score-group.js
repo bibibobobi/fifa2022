@@ -113,8 +113,6 @@ const ScoreGroup = () => {
     fetchResult();
   }, []);
 
-  console.log(result?.result?.[0].A);
-
   return (
     <ScoreGroupWrapper>
       <BorderWrapper>
