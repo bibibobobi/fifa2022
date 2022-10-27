@@ -1,19 +1,29 @@
 import styled from 'styled-components';
 
 const CardWrapper = styled.div`
-  width: 344px;
+  width: 288px;
   height: 298px;
 
   background-color: #ffffff;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.06), 0px 4px 12px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
+  @media (min-width: 768px) {
+    width: 344px;
+    height: 298px;
+  }
   @media (min-width: 1200px) {
     width: 240px;
     height: 293px;
   }
 
   img {
-    width: 240px;
+    width: 288px;
+    @media (min-width: 768px) {
+      width: 344px;
+    }
+    @media (min-width: 1200px) {
+      width: 240px;
+    }
   }
 `;
 
@@ -27,14 +37,6 @@ const ImgWrapper = styled.div`
   @media (min-width: 1200px) {
     width: 240px;
     height: 160px;
-  }
-
-  img {
-    width: 344px;
-
-    @media (min-width: 1200px) {
-      width: 240px;
-    }
   }
 `;
 

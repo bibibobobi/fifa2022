@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SubTitle from '../../components/sub-title';
 import NewsItems from './news-items';
 import NewsItemsAfterAd from './news-items-after-ad';
+import AdMob from '../../components/ad/ad-mob';
 
 const Section = styled.div`
   width: 100%;
@@ -31,6 +32,7 @@ const NewsItemsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 25px 16px;
+  justify-content: center;
   @media (min-width: 1200px) {
   }
 `;
@@ -56,6 +58,7 @@ const NewsSection = () => {
         <SubTitle>最新消息</SubTitle>
         <NewsItemsWrapper>
           <NewsItems newsItems={newsItems} />
+          <AdMob />
           <NewsItemsAfterAd newsItems={newsItems} />
         </NewsItemsWrapper>
       </Wrapper>
