@@ -23,7 +23,6 @@ const AdWrapperPc = styled.div`
 `;
 
 const AdPc = ({ inView }) => {
-  console.log(inView);
   return (
     <AdWrapperPc inView={inView && inView}>
       <p>PC AD 970x250</p>

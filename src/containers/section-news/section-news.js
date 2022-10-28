@@ -42,6 +42,10 @@ const NewsItemsWrapper = styled.div`
   }
 `;
 
+const LoadMoreAnchor = styled.div`
+  color: #f5f1f6;
+`;
+
 const NewsSection = () => {
   // Fetch Data
   const [news, setNews] = useState([]);
@@ -59,6 +63,7 @@ const NewsSection = () => {
 
   // InterSection Observer
   const [inView, setInView] = useState(false);
+  const [loadMore, setLoadMore] = useState(false);
 
   return (
     <Section>
@@ -72,7 +77,19 @@ const NewsSection = () => {
         <InView onChange={setInView}>
           {({ ref, inView }) => (
             <NewsItemsWrapper ref={ref}>
-              <NewsItemsAfterAd newsItems={newsItems} ref={ref} />
+              <NewsItemsAfterAd
+                newsItems={newsItems}
+                ref={ref}
+                loadMore={loadMore}
+              />
+            </NewsItemsWrapper>
+          )}
+        </InView>
+        <InView onChange={setLoadMore}>
+          {({ ref, loadMore }) => (
+            <NewsItemsWrapper ref={ref}>
+              <LoadMoreAnchor ref={ref} /> .
+              <LoadMoreAnchor />
             </NewsItemsWrapper>
           )}
         </InView>

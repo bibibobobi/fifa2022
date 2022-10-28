@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const CardWrapper = styled.div`
@@ -76,8 +77,17 @@ const TextWrapper = styled.div`
   }
 `;
 
-const NewsItemsAfterAd = ({ newsItems }) => {
-  return newsItems?.slice(12)?.map((item) => {
+const NewsItemsAfterAd = ({ newsItems, loadMore }) => {
+  // handle loadmore
+  const [showingCount, setShowingCount] = useState(12);
+
+  useEffect(() => {
+    if (loadMore) {
+      setShowingCount((showingCount) => showingCount + 3);
+    }
+  }, [loadMore]);
+
+  return newsItems?.slice(12, showingCount)?.map((item) => {
     return (
       <Link
         href={`https://www.mirrormedia.mg/story/${item?.slug}`}
