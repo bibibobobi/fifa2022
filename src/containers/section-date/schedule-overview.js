@@ -30,12 +30,20 @@ const Thead = styled.thead`
     :first-child {
       padding-left: 20px;
     }
+
     @media (min-width: 500px) {
-      width: 250px;
+      width: 220px;
+    }
+
+    @media (min-width: 768px) {
+      width: 120px;
+    }
+    @media (min-width: 900px) {
+      width: 200px;
     }
     @media (min-width: 1200px) {
       height: 51px;
-      width: 275px;
+      width: 245px;
     }
   }
 `;
