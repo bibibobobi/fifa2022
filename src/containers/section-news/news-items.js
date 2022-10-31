@@ -17,6 +17,7 @@ const CardWrapper = styled.div`
   }
 
   img {
+    border-radius: 6px 6px 0 0;
     width: 288px;
     @media (min-width: 768px) {
       width: 344px;
