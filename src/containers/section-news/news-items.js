@@ -48,6 +48,11 @@ const Link = styled.a`
   :link {
     color: gray;
   }
+  :hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 15%);
+    transition: all 0.5s ease-in-out;
+  }
 `;
 
 const TextWrapper = styled.div`

@@ -143,7 +143,8 @@ const ScoreGroup = () => {
               H 組
             </GroupBtn>
           </BtnWrapper>
-
+        </SwipeWrapper>
+        <SwipeWrapper>
           <ContentTab active={toggleState === 1}>
             <Table>
               <ScoreThead />

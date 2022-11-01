@@ -16,7 +16,7 @@ const ListTitle = styled.h2`
   color: #000928;
   margin: 0 0 12px 0;
   @media (min-width: 768px) {
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
   }
 `;
 

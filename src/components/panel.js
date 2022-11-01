@@ -7,7 +7,7 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: 18px;
   padding: auto;
-  width: 114px;
+  width: 105px;
   height: 51px;
   :hover {
     cursor: pointer;
@@ -33,6 +33,10 @@ export const Button = styled.button`
         color: #5d2e7a;
       }
     `}
+  @media (min-width: 377px) {
+    width: 114px;
+    height: 51px;
+  }
 
   @media (min-width: 1200px) {
     width: 140px;
