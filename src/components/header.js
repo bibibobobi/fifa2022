@@ -1,9 +1,13 @@
-import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import styled, { css } from 'styled-components';
 import { ReactComponent as Logo } from '../assets/mirrorlogo.svg';
 import ShareIcon from '../assets/share.svg';
+import Facebook from '../components/icons/facebook';
+import Line from '../components/icons/line';
 import ReactGA from 'react-ga';
 
 const HeaderWrapper = styled.div`
+  position: relative;
   width: 100%;
   height: 84px;
   background: #f0eae3;
@@ -19,6 +23,34 @@ const LogoWrapper = styled.div`
   @media (min-width: 768px) {
     padding: 16px 24px 20px 24px;
   }
+  img {
+    padding-top: 8px;
+  }
+`;
+
+const ShareIconBtn = styled.button`
+  cursor: pointer;
+`;
+
+const SocialIconWrapper = styled.div`
+  position: absolute;
+  z-index: 9;
+  right: 20px;
+  top: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  gap: 5px;
+  opacity: 0;
+  transition-duration: 0.3s;
+  ${(props) =>
+    props.show &&
+    css`
+      transform: translateY(45px);
+      opacity: 1;
+      transition-duration: 0.5s;
+    `}
 `;
 
 const handleOnclick = () => {
@@ -29,7 +61,34 @@ const handleOnclick = () => {
   });
 };
 
+const handleFbClick = () => {
+  ReactGA.event({
+    category: 'Projects_FIFA',
+    action: 'click',
+    label: '點擊分享按鈕（臉書）',
+  });
+};
+
+const handleLineClick = () => {
+  ReactGA.event({
+    category: 'Projects_FIFA',
+    action: 'click',
+    label: '點擊分享按鈕（LINE）',
+  });
+};
+
 const Header = () => {
+  const [show, setShow] = useState(false);
+  const [origin, setOrigin] = useState('');
+
+  useEffect(() => {
+    setOrigin(() => window.location.origin);
+  }, []);
+
+  function toggleShareIcons() {
+    setShow((show) => !show);
+  }
+
   return (
     <HeaderWrapper>
       <LogoWrapper>
@@ -40,10 +99,28 @@ const Header = () => {
         >
           <Logo onClick={handleOnclick} />
         </a>
-        <a href='https://www.mirrormedia.mg'>
+        <ShareIconBtn onClick={toggleShareIcons}>
           <img src={ShareIcon} alt='Share Icon' />
-        </a>
+        </ShareIconBtn>
       </LogoWrapper>
+      <SocialIconWrapper show={show}>
+        <a
+          href={`https://www.facebook.com/share.php?u=${origin}`}
+          target='_blank'
+          rel='noreferrer noopenner'
+          onClick={handleFbClick}
+        >
+          <Facebook />
+        </a>
+        <a
+          href={`https://social-plugins.line.me/lineit/share?url=${origin}`}
+          target='_blank'
+          rel='noreferrer noopenner'
+          onClick={handleLineClick}
+        >
+          <Line />
+        </a>
+      </SocialIconWrapper>
     </HeaderWrapper>
   );
 };
