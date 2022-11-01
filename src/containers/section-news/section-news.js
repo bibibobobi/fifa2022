@@ -7,6 +7,7 @@ import NewsItems from './news-items';
 import NewsItemsAfterAd from './news-items-after-ad';
 import AdMob from '../../components/ad/ad-mob';
 import AdPc from '../../components/ad/ad.pc';
+import ReactGA from 'react-ga';
 
 const Section = styled.div`
   width: 100%;
@@ -46,6 +47,13 @@ const LoadMoreAnchor = styled.div`
   color: #f5f1f6;
 `;
 
+const GaAnchorWrapper = styled.div`
+  /* width: 100%; */
+`;
+const GaAnchor = styled.div`
+  color: #5d2e7a;
+`;
+
 const NewsSection = () => {
   // Fetch Data
   const [news, setNews] = useState([]);
@@ -64,17 +72,51 @@ const NewsSection = () => {
   // InterSection Observer
   const [inView, setInView] = useState(false);
   const [loadMore, setLoadMore] = useState(false);
+  const [hasSentGa, setHasSentGa] = useState(false);
+  const [hasSentNewsGa, setHasSentNewsGa] = useState(false);
+  const [newInView, setNewsInView] = useState(false);
 
+  const handleAdInview = (isInview) => {
+    setInView(isInview);
+    if (isInview && !hasSentGa) {
+      ReactGA.event({
+        category: 'Projects_FIFA',
+        action: 'scroll',
+        label: '頁面滑動至「最新消息」區塊第 12 則新聞後',
+      });
+      setHasSentGa(true);
+    }
+  };
+
+  const handleNewsGaInview = (isInView) => {
+    setNewsInView(isInView);
+    if (isInView && !hasSentNewsGa) {
+      ReactGA.event({
+        category: 'Projects_FIFA',
+        action: 'scroll',
+        label: '頁面滑動至「最新消息」區塊',
+      });
+      setHasSentNewsGa(true);
+    }
+  };
   return (
     <Section>
       <Wrapper>
+        <InView onChange={handleNewsGaInview}>
+          {({ ref, newInView }) => (
+            <GaAnchorWrapper ref={ref}>
+              <GaAnchor ref={ref} />
+              <GaAnchor />
+            </GaAnchorWrapper>
+          )}
+        </InView>
         <SubTitle>最新消息</SubTitle>
         <NewsItemsWrapper>
           <NewsItems newsItems={newsItems} />
           <AdMob />
           <AdPc inView={inView} />
         </NewsItemsWrapper>
-        <InView onChange={setInView}>
+        <InView onChange={handleAdInview}>
           {({ ref, inView }) => (
             <NewsItemsWrapper ref={ref}>
               <NewsItemsAfterAd

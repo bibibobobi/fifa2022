@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ReactComponent as Logo } from '../assets/mirrorlogo.svg';
-import ShareIcon from '../assets/Share_button.png';
+import ShareIcon from '../assets/share.svg';
+import ReactGA from 'react-ga';
 
 const HeaderWrapper = styled.div`
   width: 100%;
@@ -20,6 +21,14 @@ const LogoWrapper = styled.div`
   }
 `;
 
+const handleOnclick = () => {
+  ReactGA.event({
+    category: 'Projects_FIFA',
+    action: 'click',
+    label: '點擊鏡週刊 LOGO',
+  });
+};
+
 const Header = () => {
   return (
     <HeaderWrapper>
@@ -29,7 +38,7 @@ const Header = () => {
           target='_blank'
           rel='noreferrer noopenner'
         >
-          <Logo />
+          <Logo onClick={handleOnclick} />
         </a>
         <a href='https://www.mirrormedia.mg'>
           <img src={ShareIcon} alt='Share Icon' />

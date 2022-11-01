@@ -11,6 +11,7 @@ import {
 import ScheduleOverview from './schedule-overview';
 import ScheduleRound16 from './schedule-round16';
 import ScheduleGroup from './schedule-group';
+import ReactGA from 'react-ga';
 
 const Section = styled.div`
   width: 100%;
@@ -39,19 +40,46 @@ const DateSection = () => {
     setToggleState(index);
   };
 
+  const handleOnclickGp = () => {
+    toggleTab(1);
+    ReactGA.event({
+      category: 'Projects_FIFA',
+      action: 'click',
+      label: '點擊賽程（小組賽）',
+    });
+  };
+
+  const handleOnclick16R = () => {
+    toggleTab(2);
+    ReactGA.event({
+      category: 'Projects_FIFA',
+      action: 'click',
+      label: '點擊賽程（16 強）',
+    });
+  };
+
+  const handleOnclickOV = () => {
+    toggleTab(3);
+    ReactGA.event({
+      category: 'Projects_FIFA',
+      action: 'click',
+      label: '點擊賽程（總覽）',
+    });
+  };
+
   return (
     <Section>
       <Wrapper>
         <PanelWrapper>
           <SubTitle>賽程</SubTitle>
           <BtnBlock>
-            <Button active={toggleState === 1} onClick={() => toggleTab(1)}>
+            <Button active={toggleState === 1} onClick={handleOnclickGp}>
               小組賽
             </Button>
-            <Button active={toggleState === 2} onClick={() => toggleTab(2)}>
+            <Button active={toggleState === 2} onClick={handleOnclick16R}>
               16強
             </Button>
-            <Button active={toggleState === 3} onClick={() => toggleTab(3)}>
+            <Button active={toggleState === 3} onClick={handleOnclickOV}>
               總覽
             </Button>
           </BtnBlock>

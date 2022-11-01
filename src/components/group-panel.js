@@ -4,7 +4,8 @@ export const BorderWrapper = styled.div`
   max-width: 756px;
   border: 2px solid #5d2e7a;
   border-radius: 8px;
-  background-color: #ffffff;
+  overflow: hidden;
+  background-color: #5d2e7a;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.06), 0px 4px 12px rgba(0, 0, 0, 0.06);
 `;
 

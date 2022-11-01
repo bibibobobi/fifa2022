@@ -9,11 +9,13 @@ import {
   ContentTab,
   PanelWrapper,
 } from '../../components/panel';
+import bgImg from '../../assets/scoreBg.svg';
+import ReactGA from 'react-ga';
 
 const Section = styled.div`
   width: 100%;
   background: #f0eae3;
-  background-image: url('https://res.cloudinary.com/di1olybhs/image/upload/v1665719181/Group_603_qniccc.png');
+  background-image: url(${bgImg});
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,16 +40,34 @@ const ScoreSection = () => {
     setToggleState(index);
   };
 
+  const handleOnclickGp = () => {
+    toggleTab(1);
+    ReactGA.event({
+      category: 'Projects_FIFA',
+      action: 'click',
+      label: '點擊戰績（小組賽）',
+    });
+  };
+
+  const handleOnclickR16 = () => {
+    toggleTab(2);
+    ReactGA.event({
+      category: 'Projects_FIFA',
+      action: 'click',
+      label: '點擊戰績（16 強）',
+    });
+  };
+
   return (
     <Section>
       <Wrapper>
         <PanelWrapper>
           <SubTitle>戰績</SubTitle>
           <BtnBlock>
-            <Button active={toggleState === 1} onClick={() => toggleTab(1)}>
+            <Button active={toggleState === 1} onClick={handleOnclickGp}>
               小組賽
             </Button>
-            <Button active={toggleState === 2} onClick={() => toggleTab(2)}>
+            <Button active={toggleState === 2} onClick={handleOnclickR16}>
               16強
             </Button>
           </BtnBlock>

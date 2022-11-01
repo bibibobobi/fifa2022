@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
 
 const CardWrapper = styled.div`
   width: 288px;
@@ -78,14 +79,30 @@ const TextWrapper = styled.div`
 `;
 
 const NewsItems = ({ newsItems }) => {
+  const handleOnClick = (index) => {
+    if (index === 0) {
+      ReactGA.event({
+        category: 'Projects_FIFA',
+        action: 'click',
+        label: '點擊「最新消息」第 1 則新聞',
+      });
+    } else if (index === 6) {
+      ReactGA.event({
+        category: 'Projects_FIFA',
+        action: 'click',
+        label: '點擊「最新消息」第 7 則新聞',
+      });
+    }
+  };
   //date format: Wed, 10 Jan 2018 07:10:58 GMT-->2018/01/10 07:10
-  return newsItems?.slice(0, 12)?.map((item) => {
+  return newsItems?.slice(0, 12)?.map((item, index) => {
     return (
       <Link
         href={`https://www.mirrormedia.mg/story/${item?.slug}`}
         target='_blank'
         rel='noreferrer'
         key={item._id}
+        onClick={() => handleOnClick(index)}
       >
         <CardWrapper key={item._id}>
           <ImgWrapper>

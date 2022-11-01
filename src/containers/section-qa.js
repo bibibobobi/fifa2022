@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import SubTitle from '../components/sub-title';
-
 // import QAList from '@readr-media/react-qa-list';
 import QAList from '../components/react-components/list/qa-list';
+import { InView } from 'react-intersection-observer';
+import ReactGA from 'react-ga';
 
 const questions = [
   {
@@ -241,13 +243,43 @@ const Wrapper = styled.div`
   }
 `;
 
+const QaGaAnchorWrapper = styled.div`
+  /* width: 100%; */
+`;
+const QaGaAnchor = styled.div`
+  color: #5d2e7a;
+`;
+
 const QaSection = () => {
+  const [inView, setInView] = useState(false);
+  const [hasSentGa, setHasSentGa] = useState(false);
+
+  const handleGaInview = (isInView) => {
+    setInView(isInView);
+    if (isInView && !hasSentGa) {
+      ReactGA.event({
+        category: 'Projects_FIFA',
+        action: 'scroll',
+        label: '頁面滑動至「FAQs」區塊最底部',
+      });
+      setHasSentGa(true);
+    }
+  };
+
   return (
     <Section>
       <Wrapper>
         <SubTitle>重要資訊懶人包</SubTitle>
         <QAList questions={questions} />
       </Wrapper>
+      <InView onChange={handleGaInview}>
+        {({ ref, inView }) => (
+          <QaGaAnchorWrapper ref={ref}>
+            <QaGaAnchor ref={ref} />
+            <QaGaAnchor />
+          </QaGaAnchorWrapper>
+        )}
+      </InView>
     </Section>
   );
 };

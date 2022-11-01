@@ -12,14 +12,14 @@ import {
 
 const Table = styled.table`
   width: 100%;
-  height: 505px;
+  height: 501px;
   border-radius: 0 0 8px 8px;
   display: block;
   font-size: 16px;
   @media (min-width: 1200px) {
     font-size: 18px;
     width: 100%;
-    height: 368px;
+    height: 363px;
   }
 `;
 

@@ -7,18 +7,16 @@ import QaSection from './containers/section-qa';
 import DateSection from './containers/section-date/section-schedule';
 import ScoreSection from './containers/section-score/section-score';
 import NewsSection from './containers/section-news/section-news';
-// import { Diamond } from './components/icons/styled-diamond';
-// import {
-//   Win,
-//   Loss,
-//   Draw,
-//   Arrow,
-//   NaCircle,
-//   AdvSquare,
-// } from './components/icons/styled-circles';
-// import SubTitle from './components/sub-title';
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
+ReactGA.initialize('UA-83609754-2');
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <>
       <Header />
