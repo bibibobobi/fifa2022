@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   height: 354px;
   background: #5d2e7a;
   background-image: url(${bgImg1});
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

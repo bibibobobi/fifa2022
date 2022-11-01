@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import SubTitle from '../components/sub-title';
 // import QAList from '@readr-media/react-qa-list';
 import QAList from '../components/react-components/list/qa-list';
 import { InView } from 'react-intersection-observer';
 import ReactGA from 'react-ga';
+import readMore from '../assets/readmore.png';
+import closeReadMore from '../assets/closeReadMore.png';
 
 const questions = [
   {
@@ -236,11 +238,85 @@ const Section = styled.div`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
   width: 92%;
   padding: 40px 0;
   @media (min-width: 1200px) {
     width: 90%;
   }
+`;
+
+const RestQaListContainer = styled.div`
+  border-radius: 6px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 615px;
+  overflow: hidden;
+  height: 50px;
+  ${(props) =>
+    props.show &&
+    css`
+      height: 100%;
+      transition-duration: 0.5s;
+      :after {
+        display: none;
+      }
+    `}
+  :after {
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 50px;
+    border-radius: 6px;
+    left: 10px;
+    background-image: linear-gradient(to bottom, transparent, white);
+  }
+  @media (min-width: 768px) {
+    height: 100%;
+  }
+`;
+
+const CloseReadMoreBtn = styled.button`
+  cursor: pointer;
+  background-color: #f5f1f6;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5d2e7a;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-top: 15px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const ReadMoreBtn = styled.button`
+  cursor: pointer;
+  background-color: #f5f1f6;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5d2e7a;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-top: 15px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  margin: auto;
+  ${(props) =>
+    props.hide &&
+    css`
+      display: none;
+    `}
 `;
 
 const QaGaAnchorWrapper = styled.div`
@@ -253,6 +329,7 @@ const QaGaAnchor = styled.div`
 const QaSection = () => {
   const [inView, setInView] = useState(false);
   const [hasSentGa, setHasSentGa] = useState(false);
+  const [showRestQa, setShowRestQa] = useState(false);
 
   const handleGaInview = (isInView) => {
     setInView(isInView);
@@ -266,11 +343,28 @@ const QaSection = () => {
     }
   };
 
+  const handleShowMore = () => {
+    setShowRestQa(true);
+  };
+
+  const handleCloseShowMore = () => {
+    setShowRestQa(false);
+  };
+
   return (
     <Section>
       <Wrapper>
         <SubTitle>重要資訊懶人包</SubTitle>
-        <QAList questions={questions} />
+        <QAList questions={questions.slice(0, 2)} />
+        <RestQaListContainer show={showRestQa}>
+          <QAList questions={questions.slice(2)} />
+          <CloseReadMoreBtn onClick={handleCloseShowMore}>
+            收合部分 <img src={closeReadMore} alt='close read more' />
+          </CloseReadMoreBtn>
+        </RestQaListContainer>
+        <ReadMoreBtn onClick={handleShowMore} hide={showRestQa}>
+          展開全部 <img src={readMore} alt='read more' />
+        </ReadMoreBtn>
       </Wrapper>
       <InView onChange={handleGaInview}>
         {({ ref, inView }) => (

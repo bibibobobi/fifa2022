@@ -16,6 +16,7 @@ const Section = styled.div`
   width: 100%;
   background: #f0eae3;
   background-image: url(${bgImg});
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -34,21 +34,21 @@ const ShareIconBtn = styled.button`
 
 const SocialIconWrapper = styled.div`
   position: absolute;
-  z-index: 9;
   right: 20px;
-  top: 40px;
+  top: 50px;
   width: 40px;
   display: flex;
   flex-direction: column;
   margin-top: 8px;
   gap: 5px;
   opacity: 0;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
   ${(props) =>
     props.show &&
     css`
-      transform: translateY(45px);
+      transform: translateY(25%);
       opacity: 1;
+      z-index: 9;
       transition-duration: 0.5s;
     `}
 `;
