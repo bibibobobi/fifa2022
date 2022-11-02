@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
 
 const LogoWrapper = styled.div`
   padding: 12px 16px 16px 16px;
-  height: 48px;
+  /* height: 48px; */
   display: flex;
   justify-content: space-between;
 
@@ -24,7 +24,7 @@ const LogoWrapper = styled.div`
     padding: 16px 24px 20px 24px;
   }
   img {
-    padding-top: 8px;
+    margin-top: 8px;
   }
 `;
 

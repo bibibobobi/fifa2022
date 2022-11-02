@@ -90,6 +90,7 @@ export const ContentTab = styled.div`
   width: 100%;
   height: 100%;
   display: none;
+  border-radius: 0 0 6px 6px;
   ${(props) =>
     props.active &&
     css`

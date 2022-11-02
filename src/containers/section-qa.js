@@ -272,6 +272,9 @@ const RestQaListContainer = styled.div`
     border-radius: 6px;
     left: 10px;
     background-image: linear-gradient(to bottom, transparent, white);
+    @media (min-width: 660px) {
+      width: 85%;
+    }
     @media (min-width: 768px) {
       display: none;
     }
