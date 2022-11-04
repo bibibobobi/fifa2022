@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import DfpAd from './dfpAd';
+import useViewportWidth from '../../useViewport';
+import { useMemo } from 'react';
 
 const AdWrapper = styled.div`
   display: flex;
@@ -28,10 +30,17 @@ const AdWrapper = styled.div`
 `;
 
 const Ad = ({ inView }) => {
-  console.log({ inView });
+  const viewPort = useViewportWidth();
+  const size = useMemo(() => {
+    if (viewPort.viewportWidth >= 1200) {
+      return { width: 970, height: 250 };
+    }
+    return { width: 300, height: 250 };
+  }, [viewPort.viewportWidth]);
+
   return (
     <AdWrapper inView={inView}>
-      <DfpAd width={300} height={250}></DfpAd>
+      <DfpAd width={size.width} height={size.height}></DfpAd>
     </AdWrapper>
   );
 };
