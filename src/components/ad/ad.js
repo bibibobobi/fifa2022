@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import DfpAd from './dfpAd';
-import useViewportWidth from '../../useViewport';
-import { useMemo } from 'react';
+// import useViewportWidth from '../../useViewport';
+// import { useMemo } from 'react';
 
 const AdWrapper = styled.div`
   display: flex;
-  width: 300px;
+  min-width: 300px;
   height: 250px;
   background-color: rgba(0, 0, 0, 1);
   color: #ffffff;
@@ -30,17 +30,17 @@ const AdWrapper = styled.div`
 `;
 
 const Ad = ({ inView }) => {
-  const viewPort = useViewportWidth();
-  const size = useMemo(() => {
-    if (viewPort.viewportWidth >= 1200) {
-      return { width: 970, height: 250 };
-    }
-    return { width: 300, height: 250 };
-  }, [viewPort.viewportWidth]);
+  // const viewPort = useViewportWidth();
+  // const size = useMemo(() => {
+  //   if (viewPort.viewportWidth >= 1200) {
+  //     return { width: 970, height: 250 };
+  //   }
+  //   return { width: 300, height: 250 };
+  // }, [viewPort.viewportWidth]);
 
   return (
     <AdWrapper inView={inView}>
-      <DfpAd width={size.width} height={size.height}></DfpAd>
+      <DfpAd></DfpAd>
     </AdWrapper>
   );
 };
