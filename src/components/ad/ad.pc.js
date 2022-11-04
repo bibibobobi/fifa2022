@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import useDfpSlot from '../../useDfpSlot';
+import DfpAd from './dfpAd';
 
 const AdWrapperPc = styled.div`
   position: fixed;
@@ -9,7 +9,8 @@ const AdWrapperPc = styled.div`
 
   width: 970px;
   height: 250px;
-  background-color: #e51731;
+  background-color: red;
+  /* background-color: rgba(0, 0, 0, 0); */
   color: #ffffff;
   font-size: 40px;
   display: none;
@@ -24,17 +25,9 @@ const AdWrapperPc = styled.div`
 `;
 
 const AdPc = ({ inView }) => {
-  useDfpSlot({
-    path: '/40175602/mirror_RWD_2022FIFA_970250-300250_FT',
-    size: [970, 250],
-    id: 'CI3jpfTNkfsCFZJgDwIdIwIOow',
-  });
   return (
     <AdWrapperPc inView={inView && inView}>
-      <div
-        id='CI3jpfTNkfsCFZJgDwIdIwIOow'
-        style={{ width: '970px', height: '250px' }}
-      />
+      <DfpAd width={970} height={250}></DfpAd>
     </AdWrapperPc>
   );
 };
