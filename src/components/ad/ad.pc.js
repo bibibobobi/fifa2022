@@ -26,7 +26,7 @@ const AdWrapperPc = styled.div`
 
 const AdPc = ({ inView }) => {
   return (
-    <AdWrapperPc inView={inView && inView}>
+    <AdWrapperPc inView={inView}>
       <DfpAd width={970} height={250}></DfpAd>
     </AdWrapperPc>
   );
