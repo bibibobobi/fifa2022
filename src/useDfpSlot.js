@@ -5,7 +5,7 @@ const useDfpSlot = ({ path, size, id }) => {
     const googletag = window.googletag || {};
     googletag.cmd = googletag.cmd || [];
     googletag.cmd.push(function () {
-      googletag.defineSlot(path, size, id).addService(googletag.pubads());
+      googletag.defineSlot(path, size, id)?.addService(googletag.pubads());
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });
