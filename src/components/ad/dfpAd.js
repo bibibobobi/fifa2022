@@ -20,7 +20,7 @@ const DfpAd = ({ width, height }) => {
   return (
     <div
       id='div-gpt-ad-1667527475103-0'
-      style={{ 'min-width': '300px', 'min-height': '250px' }}
+      style={{ minWidth: '300px', minHeight: '250px' }}
     ></div>
   );
 };
