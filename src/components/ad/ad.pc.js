@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import useDfpSlot from '../../useDfpSlot';
 
 const AdWrapperPc = styled.div`
   position: fixed;
@@ -23,9 +24,17 @@ const AdWrapperPc = styled.div`
 `;
 
 const AdPc = ({ inView }) => {
+  useDfpSlot({
+    path: '/40175602/mirror_RWD_2022FIFA_970250-300250_FT',
+    size: [970, 250],
+    id: 'CI3jpfTNkfsCFZJgDwIdIwIOow',
+  });
   return (
     <AdWrapperPc inView={inView && inView}>
-      <p>PC AD 970x250</p>
+      <div
+        id='CI3jpfTNkfsCFZJgDwIdIwIOow'
+        style={{ width: '970px', height: '250px' }}
+      />
     </AdWrapperPc>
   );
 };

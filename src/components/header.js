@@ -15,7 +15,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-  padding: 12px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
   /* height: 48px; */
   display: flex;
   justify-content: space-between;
@@ -24,11 +24,13 @@ const LogoWrapper = styled.div`
     padding: 16px 24px 20px 24px;
   }
   img {
-    margin-top: 8px;
+    background: #f0eae3;
+    /* margin-top: 8px; */
   }
 `;
 
 const ShareIconBtn = styled.button`
+  background: #f0eae3;
   cursor: pointer;
 `;
 
