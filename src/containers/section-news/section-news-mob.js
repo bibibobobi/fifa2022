@@ -5,9 +5,8 @@ import styled from 'styled-components';
 import SubTitle from '../../components/sub-title';
 import NewsItems from './news-items';
 import NewsItemsAfterAd from './news-items-after-ad';
-// import AdMob from '../../components/ad/ad-mob';
-import AdPc from '../../components/ad/ad.pc';
-import AdTablet from '../../components/ad/ad-tablet';
+import AdMob from '../../components/ad/ad-mob';
+// import AdPc from '../../components/ad/ad.pc';
 // import Ad from '../../components/ad/ad';
 import ReactGA from 'react-ga';
 
@@ -56,7 +55,7 @@ const GaAnchor = styled.div`
   color: #5d2e7a;
 `;
 
-const NewsSection = () => {
+const NewsSectionMob = () => {
   // Fetch Data
   const [news, setNews] = useState([]);
   useEffect(() => {
@@ -116,8 +115,8 @@ const NewsSection = () => {
         <NewsItemsWrapper>
           <NewsItems newsItems={newsItems} />
           {/* <Ad inView={inView} /> */}
-          <AdTablet />
-          <AdPc inView={inView} />
+          <AdMob />
+          {/* <AdPc inView={inView} /> */}
         </NewsItemsWrapper>
         <InView onChange={handleAdInview}>
           {({ ref, inView }) => (
@@ -143,4 +142,4 @@ const NewsSection = () => {
   );
 };
 
-export default NewsSection;
+export default NewsSectionMob;

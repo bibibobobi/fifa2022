@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import DfpAd from './dfpAd';
+// import DfpAd from './dfpAd';
+import { DFPSlotsProvider, AdSlot } from 'react-dfp';
+import useDfpSlot from '../../useDfpSlot';
 
 const AdWrapperPc = styled.div`
   position: fixed;
@@ -9,7 +11,7 @@ const AdWrapperPc = styled.div`
 
   width: 970px;
   height: 250px;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.3);
   /* background-color: rgba(0, 0, 0, 0); */
   color: #ffffff;
   font-size: 40px;
@@ -25,9 +27,22 @@ const AdWrapperPc = styled.div`
 `;
 
 const AdPc = ({ inView }) => {
+  // useDfpSlot({
+  //   path: '/40175602/mirror_RWD_2022FIFA_970250-300250_FT',
+  //   size: [970, 250],
+  //   id: 'adSlot-1',
+  // });
   return (
     <AdWrapperPc inView={inView}>
-      <DfpAd width={970} height={250}></DfpAd>
+      {/* <div id='adSlot-1' style={{ width: '970px', height: '250px' }} /> */}
+      <DFPSlotsProvider dfpNetworkId='40175602'>
+        <AdSlot
+          id='adSlot-1'
+          adUnit='mirror_RWD_2022FIFA_970250-300250_FT'
+          sizes={[[970, 250]]}
+        />
+      </DFPSlotsProvider>
+      {/* <DfpAd width={970} height={250}></DfpAd> */}
     </AdWrapperPc>
   );
 };

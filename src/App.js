@@ -7,6 +7,7 @@ import QaSection from './containers/section-qa';
 import DateSection from './containers/section-date/section-schedule';
 import ScoreSection from './containers/section-score/section-score';
 import NewsSection from './containers/section-news/section-news';
+import NewsSectionMob from './containers/section-news/section-news-mob';
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
@@ -35,7 +36,7 @@ function App() {
         <DateSection />
         <ScoreSection />
         <QaSection />
-        <NewsSection />
+        <NewsSectionMob />
       </MobileWrapper>
     </>
   );
