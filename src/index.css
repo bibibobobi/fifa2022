@@ -10,8 +10,8 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  overflow: hidden;
+  /* height: 100%; */
+  /* overflow: hidden; */
   background-color: #5d2e7a;
 }
 

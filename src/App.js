@@ -30,14 +30,6 @@ function App() {
         <ScoreSection />
         <NewsSection />
       </MatchWrapper>
-
-      <MobileWrapper>
-        <TitleSection />
-        <DateSection />
-        <ScoreSection />
-        <QaSection />
-        <NewsSectionMob />
-      </MobileWrapper>
     </>
   );
 }

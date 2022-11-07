@@ -6,9 +6,9 @@ import SubTitle from '../../components/sub-title';
 import NewsItems from './news-items';
 import NewsItemsAfterAd from './news-items-after-ad';
 // import AdMob from '../../components/ad/ad-mob';
-import AdPc from '../../components/ad/ad.pc';
-import AdTablet from '../../components/ad/ad-tablet';
-// import Ad from '../../components/ad/ad';
+// import AdPc from '../../components/ad/ad.pc';
+// import AdTablet from '../../components/ad/ad-tablet';
+import Ad from '../../components/ad/ad';
 import ReactGA from 'react-ga';
 
 const Section = styled.div`
@@ -115,9 +115,9 @@ const NewsSection = () => {
         <SubTitle>最新消息</SubTitle>
         <NewsItemsWrapper>
           <NewsItems newsItems={newsItems} />
-          {/* <Ad inView={inView} /> */}
-          <AdTablet />
-          <AdPc inView={inView} />
+          <Ad inView={inView} />
+          {/* <AdTablet />
+          <AdPc inView={inView} /> */}
         </NewsItemsWrapper>
         <InView onChange={handleAdInview}>
           {({ ref, inView }) => (
