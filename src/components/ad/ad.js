@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import DfpAd from './dfpAd';
 import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 
 const AdWrapper = styled.div`

@@ -111,7 +111,7 @@ const TitleSection = () => {
       </YearWrapper>
       <EnTitleWrapper>FIFA World Cup</EnTitleWrapper>
       <ChTitleWrapper>世足賽觀賽重點</ChTitleWrapper>
-      <LogoWrapper>LOGO</LogoWrapper>
+      {/* <LogoWrapper>LOGO</LogoWrapper> */}
     </Wrapper>
   );
 };

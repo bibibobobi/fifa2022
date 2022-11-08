@@ -26,6 +26,7 @@ const Section = styled.div`
 const Wrapper = styled.div`
   width: 92%;
   padding: 40px 0;
+  overflow: hidden;
   @media (min-width: 1200px) {
     width: 95%;
   }
@@ -133,7 +134,7 @@ const NewsSection = () => {
         <InView onChange={setLoadMore}>
           {({ ref, loadMore }) => (
             <NewsItemsWrapper ref={ref}>
-              <LoadMoreAnchor ref={ref} /> .
+              <LoadMoreAnchor ref={ref} />
               <LoadMoreAnchor />
             </NewsItemsWrapper>
           )}
