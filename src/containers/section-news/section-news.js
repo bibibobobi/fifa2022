@@ -63,7 +63,7 @@ const NewsSection = () => {
   useEffect(() => {
     const fetchResult = async () => {
       const response = await axios(
-        'https://www.mirrormedia.mg/json/5816e555aa39ed0d00bfd9d3.json'
+        'https://www.mirrormedia.mg/json/63521e9d11a2841a005e7470.json'
       );
       setNews(response?.data);
     };

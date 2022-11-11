@@ -5,7 +5,7 @@ const AdWrapper = styled.div`
   display: flex;
   min-width: 300px;
   height: 250px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.2);
   color: #ffffff;
   font-size: 40px;
   align-items: center;
@@ -18,7 +18,7 @@ const AdWrapper = styled.div`
     transform: translateX(-25%);
     width: 970px;
     height: 250px;
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.2);
     ${(props) =>
       !props.inView &&
       `

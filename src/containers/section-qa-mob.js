@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import SubTitle from '../components/sub-title';
-// import QAList from '@readr-media/react-qa-list';
 import QAList from '../components/react-components/list/qa-list';
 import { InView } from 'react-intersection-observer';
 import ReactGA from 'react-ga';
@@ -570,11 +569,10 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 4px solid #5d2e7a;
-  display: none;
   @media (min-width: 768px) {
     border-bottom: none;
     padding-bottom: 80px;
-    display: flex;
+    display: none;
   }
 
   @media (min-width: 1200px) {
@@ -675,7 +673,7 @@ const QaGaAnchor = styled.div`
   color: #5d2e7a;
 `;
 
-const QaSection = () => {
+const QaSectionMob = () => {
   const [inView, setInView] = useState(false);
   const [hasSentGa, setHasSentGa] = useState(false);
   const [showRestQa, setShowRestQa] = useState(false);
@@ -727,4 +725,4 @@ const QaSection = () => {
   );
 };
 
-export default QaSection;
+export default QaSectionMob;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { ReactComponent as Logo } from '../assets/mirrorlogo.svg';
 import ShareIcon from '../assets/share.svg';
@@ -81,11 +81,11 @@ const handleLineClick = () => {
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  const [origin, setOrigin] = useState('');
+  // const [origin, setOrigin] = useState('');
 
-  useEffect(() => {
-    setOrigin(() => window.location.origin);
-  }, []);
+  // useEffect(() => {
+  //   setOrigin(() => window.location.origin);
+  // }, []);
 
   function toggleShareIcons() {
     setShow((show) => !show);
@@ -107,7 +107,7 @@ const Header = () => {
       </LogoWrapper>
       <SocialIconWrapper show={show}>
         <a
-          href={`https://www.facebook.com/share.php?u=${origin}`}
+          href={`https://www.facebook.com/share.php?u=${'https://www.mirrormedia.mg/projects/fifa2022/index.html'}`}
           target='_blank'
           rel='noreferrer noopenner'
           onClick={handleFbClick}
@@ -115,7 +115,7 @@ const Header = () => {
           <Facebook />
         </a>
         <a
-          href={`https://social-plugins.line.me/lineit/share?url=${origin}`}
+          href={`https://social-plugins.line.me/lineit/share?url=${'https://www.mirrormedia.mg/projects/fifa2022/index.html'}`}
           target='_blank'
           rel='noreferrer noopenner'
           onClick={handleLineClick}
