@@ -144,400 +144,403 @@ const ScoreGroup = () => {
             </GroupBtn>
           </BtnWrapper>
         </SwipeWrapper>
-        <SwipeWrapper>
-          <ContentTab active={toggleState === 1}>
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[0].A.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
+        {result?.result?.length !== 0 && (
+          <SwipeWrapper>
+            <ContentTab active={toggleState === 1}>
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[0].A.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
 
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-          <ContentTab active={toggleState === 2}>
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[1].B.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-          <ContentTab active={toggleState === 3}>
-            {' '}
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[2].C.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-          <ContentTab active={toggleState === 4}>
-            {' '}
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[3].D.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-          <ContentTab active={toggleState === 5}>
-            {' '}
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[4].E.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-          <ContentTab active={toggleState === 6}>
-            {' '}
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[5].F.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-          <ContentTab active={toggleState === 7}>
-            {' '}
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[6].G.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-          <ContentTab active={toggleState === 8}>
-            {' '}
-            <Table>
-              <ScoreThead />
-              <Tbody>
-                {result?.result?.[7].H.map((team) => {
-                  const fillRecent = team.recent;
-                  for (let i = 0; i < 3; i++) {
-                    if (!fillRecent[i]) fillRecent[i] = {};
-                  }
-                  return (
-                    <tr key={team.key}>
-                      <td>
-                        {team.advanced && <Advanced />}
-                        {team.team}
-                      </td>
-                      <td>{team.GP}</td>
-                      <td className='points'>{team.points}</td>
-                      <td>{team.wins}</td>
-                      <td>{team.losses}</td>
-                      <td>{team.draws}</td>
-                      <td>{team.GS}</td>
-                      <td>{team.GA}</td>
-                      <td>{team.GD}</td>
-                      <td>
-                        {team.recent.map((item, index) => {
-                          let status;
-                          switch (item[index + 1]) {
-                            case true:
-                              status = 'win';
-                              break;
-                            case false:
-                              status = 'loss';
-                              break;
-                            case null:
-                              status = 'draw';
-                              break;
-                            default:
-                              status = 'empty';
-                          }
-                          return <NaCircle key={index} status={status} />;
-                        })}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </ContentTab>
-        </SwipeWrapper>
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+            <ContentTab active={toggleState === 2}>
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[1].B.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+            <ContentTab active={toggleState === 3}>
+              {' '}
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[2].C.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+            <ContentTab active={toggleState === 4}>
+              {' '}
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[3].D.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+            <ContentTab active={toggleState === 5}>
+              {' '}
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[4].E.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+            <ContentTab active={toggleState === 6}>
+              {' '}
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[5].F.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+            <ContentTab active={toggleState === 7}>
+              {' '}
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[6].G.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+            <ContentTab active={toggleState === 8}>
+              {' '}
+              <Table>
+                <ScoreThead />
+                <Tbody>
+                  {result?.result?.[7].H.map((team) => {
+                    const fillRecent = team.recent;
+                    for (let i = 0; i < 3; i++) {
+                      if (!fillRecent[i]) fillRecent[i] = {};
+                    }
+                    return (
+                      <tr key={team.key}>
+                        <td>
+                          {team.advanced && <Advanced />}
+                          {team.team}
+                        </td>
+                        <td>{team.GP}</td>
+                        <td className='points'>{team.points}</td>
+                        <td>{team.wins}</td>
+                        <td>{team.losses}</td>
+                        <td>{team.draws}</td>
+                        <td>{team.GS}</td>
+                        <td>{team.GA}</td>
+                        <td>{team.GD}</td>
+                        <td>
+                          {team.recent.map((item, index) => {
+                            let status;
+                            switch (item[index + 1]) {
+                              case true:
+                                status = 'win';
+                                break;
+                              case false:
+                                status = 'loss';
+                                break;
+                              case null:
+                                status = 'draw';
+                                break;
+                              default:
+                                status = 'empty';
+                            }
+                            return <NaCircle key={index} status={status} />;
+                          })}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            </ContentTab>
+          </SwipeWrapper>
+        )}
       </BorderWrapper>
+
       <InfoRow>
         <span>
           <AdvSquare className='icon' />

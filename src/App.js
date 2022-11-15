@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   overflow-x: hidden;
 `;
 
-ReactGA.initialize('UA-83609754-2');
+ReactGA.initialize('UA-83609754-1');
 
 function App() {
   useEffect(() => {
