@@ -66,12 +66,15 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: space-between;
-  padding: 15px;
+  padding: 10px 14px;
   @media (min-width: 1200px) {
     height: 133px;
   }
 
   .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     color: rgba(0, 9, 40, 0.87);
     font-size: 16px;
     @media (min-width: 1200px) {
@@ -83,6 +86,28 @@ export const TextWrapper = styled.div`
     font-size: 12px;
     @media (min-width: 1200px) {
       font-size: 14px;
+    }
+  }
+`;
+
+export const TitleWrapper = styled.div`
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+
+  @media (min-width: 1200px) {
+    height: 90px;
+  }
+
+  .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: rgba(0, 9, 40, 0.87);
+    font-size: 16px;
+    @media (min-width: 1200px) {
+      font-size: 16px;
+      -webkit-line-clamp: 4;
     }
   }
 `;

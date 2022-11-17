@@ -5,6 +5,7 @@ import {
   ImgWrapper,
   Link,
   TextWrapper,
+  TitleWrapper,
 } from '../../components/news-card';
 
 const NewsItems = ({ newsItems }) => {
@@ -41,7 +42,9 @@ const NewsItems = ({ newsItems }) => {
             />
           </ImgWrapper>
           <TextWrapper>
-            <p className='title'>{item?.title.slice(0, 48)}</p>
+            <TitleWrapper>
+              <p className='title'>{item?.title}</p>
+            </TitleWrapper>
             <p className='date'>
               {dayjs(item?.publishedDate).format('YYYY/MM/DD HH:mm')}
             </p>
