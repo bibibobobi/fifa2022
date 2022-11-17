@@ -1,4 +1,5 @@
 import ReactGA from 'react-ga';
+import dayjs from 'dayjs';
 import {
   CardWrapper,
   ImgWrapper,
@@ -40,13 +41,9 @@ const NewsItems = ({ newsItems }) => {
             />
           </ImgWrapper>
           <TextWrapper>
-            <p className='title'>{item?.title}</p>
+            <p className='title'>{item?.title.slice(0, 48)}</p>
             <p className='date'>
-              {`${item?.slug?.slice(0, -10)}/${item?.slug?.slice(
-                4,
-                -8
-              )}/${item?.slug?.slice(6, -6)} `}
-              {item?.createTime?.slice(17, -7)}
+              {dayjs(item?.publishedDate).format('YYYY/MM/DD HH:mm')}
             </p>
           </TextWrapper>
         </CardWrapper>

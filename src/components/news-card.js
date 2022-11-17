@@ -75,7 +75,7 @@ export const TextWrapper = styled.div`
     color: rgba(0, 9, 40, 0.87);
     font-size: 16px;
     @media (min-width: 1200px) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .date {
