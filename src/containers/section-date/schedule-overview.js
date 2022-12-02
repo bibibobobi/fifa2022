@@ -82,6 +82,7 @@ const Tbody = styled.thead`
     }
   }
   .group {
+    width: 35px;
     display: none;
     font-size: 14px;
     padding: 0 5px;
